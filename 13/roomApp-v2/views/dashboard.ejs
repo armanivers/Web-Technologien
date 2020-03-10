@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <header>
+      <%- include("includes/header.ejs") %>
+    </header>
+
+
+      <main id="outside_container">
+        <div class="kachel">
+          <p>
+            <a href="/raumliste" class="fuelle_kachel">Raumliste</a>
+          </p>
+        </div>
+        <div class="kachel">
+          <p>
+            <a href="/raumdetail" class="fuelle_kachel">Raumdetails</a>
+          </p>
+        </div>
+        <div class="kachel">
+          <p>
+            <!-- "WT_PR03_3_Buchungen1.html" -->
+            <a href="/buchungsdetail" class="fuelle_kachel"
+              >Buchungsdetails</a
+            >
+          </p>
+        </div>
+        <div class="kachel">
+          <p>
+            <!-- "WT_PR03_A4_Seminar1.html" -->
+            <a href="/neuebuchung" class="fuelle_kachel"
+              >Neue Buchung anlegen</a
+            >
+          </p>
+        </div>
+        <!-- <div id = "plus_kachel" class="kachel">
+          <p>
+            <a class="fuelle_kachel">+</a
+            >
+          </p>
+        </div> -->
+      </main>
+      <%- include("includes/footer.ejs") %>
+
+  <!-- WICHTIG UM JS AUZSUFUHREN! -->
+  <script src='js/dashboard.js'></script>
+  <script src='js/tictac.js'></script>
+  <!-- WICHTIG UM JS AUZSUFUHREN! -->
+  </body>
+</html>

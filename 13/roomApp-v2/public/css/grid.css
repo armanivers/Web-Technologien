@@ -1,0 +1,138 @@
+#outside_container1{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas: "header header"
+                         "nav nav"
+                         "inner_container aside"
+                         "inner_container aside"
+                         "footer footer";
+}
+
+#inner_container1{
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-template-areas: "articles bild";
+
+}
+
+#articles1{
+    display: grid;
+    grid-template-rows: 50% auto;
+    grid-template-areas: "article_1"
+                         "article_2";
+}
+
+#header_item1{
+    grid-area: header;
+}
+#nav_item1{
+    grid-area: nav;
+}
+#inner_container1{
+    grid-area: inner_container;
+}
+#bild_ae01{
+    grid-area: bild;
+}
+#articles1{
+    grid-area: articles;
+}
+
+#article_1{
+    grid-area: article_1;
+}
+
+#article_2{
+    grid-area: article_2;
+}
+
+#aside_item1{
+    grid-area: aside;
+}
+/* nicht noetig*/
+#footer_item1{
+    grid-area: footer;
+}
+/* Optionen fur die erste Seite--------------------------------------------------------*/
+#outside_cointainer{
+    display: grid;
+    grid-template-columns: 75% auto;
+    grid-template-areas: "header header"
+                        "nav nav"
+                        "inner_container aside"
+                        "footer footer";
+}
+
+#header_item2{
+    grid-area: header;
+}
+#main_item2{
+    grid-area: main;
+}
+#aside_item2{
+    grid-area: aside;
+}
+/* nicht noetig*/
+#footer_item2{
+    grid-area: footer;
+}
+#nav_item2{
+    grid-area: nav;
+}
+
+@media screen and (max-width: 480px){
+    #outside_container1{
+        display: grid;
+        grid-template-areas: "header"
+                             "nav"
+                             "inner_container"
+                             "aside"
+                             "footer";
+    }
+    
+    #AE01_Bild{
+        float: left;
+    }
+    #inner_container1{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "articles"
+                             "bild";
+    
+    }
+    
+    
+
+    #articles1{
+        display: grid;
+        grid-template-rows: 50% auto;
+        grid-template-areas: "article_1"
+                             "article_2";
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px){
+    #outside_container1{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: "header"
+                             "nav"
+                             "inner_container"
+                             "aside"
+                             "footer";
+    }
+    
+    #inner_container1{
+        display: grid;
+        grid-template-columns: 70% auto;
+        grid-template-areas: "articles bild";
+    }
+    
+    #articles1{
+        display: grid;
+        grid-template-rows: 50% auto;
+        grid-template-areas: "article_1"
+                             "article_2";
+    }
+}

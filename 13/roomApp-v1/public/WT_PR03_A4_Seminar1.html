@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Buchungsformular</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/grid.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="outside_container2">
+      <!--Header für die Navigation-->
+      <header id="header_item2">
+        <h1>Raumapp</h1>
+        <a href="dashboard.html">
+          <img
+            src="img/Logo.jpg"
+            alt="Logo"
+            id="logo_image"
+            height="80"
+            width="80"
+          />
+        </a>
+      </header>
+
+      <nav id="nav_item2">
+        <b>Navigation:</b>
+        <ul>
+          <li><a href="raumliste.html">Raumliste</a></li>
+          <li>|</li>
+          <li><a href="A.E.01.html">Raumdetails</a></li>
+          <li>|</li>
+          <li><a href="WT_PR03_3_Buchungen1.html">Buchungsdetails</a></li>
+        </ul>
+      </nav>
+
+      <!--Main für das Buchungsformular-->
+      <main id="main_item2">
+        <h2>Formular zum Anlegen einer Raumbuchung</h2>
+        <form
+          action="https://labs.inf.fh-dortmund.de/roomReservationService/testCreateReservation.php"
+          method="POST"
+        >
+          <fieldset>
+            <legend>Raumdetails:</legend>
+            <p>
+              <label for="roomno">Raumnummer</label>
+              <select name="roomno" id="roomno" autofocus>
+                <!--hier müsste noch required hin der Validator gibt jedoch einen Fehler aus-->
+                <option value="A.E.01">A.E.01</option>
+                <option value="A.3.03">A.3.03</option>
+                <option value="A.2.23">A.2.23</option>
+              </select>
+              <span class="erforderlich"></span>
+            </p>
+            <p>
+              <label for="restitle">Bezeichnung der Buchung</label>
+              <input
+                type="text"
+                name="restitle"
+                id="restitle"
+                maxlength="20"
+                placeholder="z.B. Vorlesung"
+                required
+              />
+              <span class="erforderlich"></span>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Zeit:</legend>
+            <p>
+              <label for="resdate">Datum der Buchung</label>
+              <input type="date" name="resdate" id="resdate" required />
+              <span class="erforderlich"></span>
+            </p>
+            <p>
+              <label for="resstart">Startzeit</label>
+              <input
+                type="time"
+                name="resstart"
+                id="resstart"
+                min="08:00"
+                max="21:00"
+                required
+              />
+              <span class="erforderlich"></span>
+              <label for="resend">Endzeit</label>
+              <input
+                type="time"
+                name="resend"
+                id="resend"
+                max="22:00"
+                required
+              />
+              <span class="erforderlich"></span>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Anderes:</legend>
+            <p>
+              <label for="resperson">Buchende Person</label>
+              <select name="resperson" id="resperson">
+                <option value="Max Mustermann">Max Mustermann</option>
+                <option value="Maxi Musterfrau">Maxi Musterfrau</option>
+                <option value="Erik Erikson">Erik Erikson</option>
+                <option value="Gerhard Gerhardson">Gerhard Gerhardson</option>
+              </select>
+            </p>
+            <p>
+              <label for="resparticipants">Anzahl an Teilnehmern</label>
+              <input
+                type="number"
+                name="resparticipants"
+                id="resparticipants"
+              />
+            </p>
+            <p>
+              <label for="resdescription">Beschreibung der Buchung</label><br />
+              <textarea
+                cols="50"
+                rows="10"
+                name="resdescription"
+                id="resdescription"
+                maxlength="500"
+              ></textarea>
+            </p>
+            <br />
+          </fieldset>
+
+          <!-- davor war es ein input! lieber zu button andern! -->
+          <button type="submit" id="submit_button">Submit</button>
+        </form>
+      </main>
+      <!--Aside für die Meldungen-->
+      <aside id="aside_item2">
+        <h3>Aktuelle Meldungen:</h3>
+        <ul>
+          <li>
+            <b>Raum bitte sauber halten</b>
+            <ul>
+              <li>03.10.2019</li>
+              <li>Versuchen Sie den Raum bitte sauber zu hinterlassen.</li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+      <!--Footer für das Copyright-->
+      <footer id="footer_item2">
+        Copyright--© 2019 Arman Iliev & Dustin Cziurlok
+      </footer>
+    </div>
+  </body>
+</html>

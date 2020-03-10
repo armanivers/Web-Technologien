@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Buchungsdetails</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/flexbox.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="container_rot2">
+      <!--Header für die Navigation-->
+      <header>
+        <%- include("includes/header.ejs") %>
+      </header>
+
+      <nav>
+        <%- include("includes/navigation.ejs") %>
+      </nav>
+
+      <!--Main für die Buchunsinformationen-->
+      <div id="gruen2">
+        <main id="schwarz2">
+          <article>
+            <h2>Informationen zur Buchung:</h2>
+            <ol>
+              <li>Bezeichnung: Vorlesung Webtechnologien</li>
+              <li>Datum: 13.10.19</li>
+              <li>Zeitraum: 8.30 Uhr - 10.05 Uhr</li>
+              <li>
+                Gebucht von:
+                <a href="mailto:sven.joerges@fh-dortmund.de">Sven Jörges</a>
+              </li>
+              <li>Teilnehmeranzahl: 150</li>
+            </ol>
+          </article>
+          <article>
+            <h3>Beschreibung der Buchung:</h3>
+
+            Das Thema der Vorlesung ist <i>HTML</i> und die dazugehörigen
+            Grundlagen. Dazu gehören<br />
+            verschiedene Befehle und Kommandos. Außerdem werden erste kleine
+            HTML-Seiten<br />
+            vorgestellt und besprochen.
+          </article>
+        </main>
+
+        <!--Aside für die Meldungen-->
+        <%- include("includes/aside.ejs") %>
+      <!--Footer für das Copyright-->
+      <%- include("includes/footer.ejs") %>
+    </div>
+  </body>
+</html>

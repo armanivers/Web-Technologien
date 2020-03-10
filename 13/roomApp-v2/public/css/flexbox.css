@@ -1,0 +1,35 @@
+#container_rot{
+    display: flex;
+    flex-direction: column;
+}
+#gruen{
+    display: flex;
+    flex-direction: row;
+}
+#schwarz{
+    flex:1;
+}
+
+#container_rot2{
+    display: flex;
+    flex-direction: column;
+}
+
+#gruen2{
+    display: flex;
+    flex-direction: row;
+}
+#schwarz2{
+    flex:1;
+}
+
+@media screen and (max-width: 768px){
+    #gruen{
+        display: flex;
+        flex-direction: column;
+    }
+    #gruen2{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Raumdetails</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/grid.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body id="outside_container1">
+
+    <header id="header_item1">
+      <%- include("includes/header.ejs") %>
+    </header>
+
+    <nav id="nav_item1">
+      <%- include("includes/navigation.ejs") %>
+    </nav>
+
+    <!--Main für die Raum- und Buchungsinformationen-->
+    <main id="inner_container1">
+
+      <figure id="bild_ae01">
+        <img src="img/A.E.01.jpg" alt="A.E.01" id="AE01_Bild" />
+        <figcaption>
+          <small>AE01 Hörsaal</small>
+        </figcaption>
+      </figure>
+
+      <div id="articles1">
+        <article id="article_1">
+          <h2>Informationen zum Raum A.E.01:</h2>
+          <ul id = "rauminfos">
+            <!-- leere Liste für die Informationen zum Raum -->
+          </ul>
+        </article>
+        <article class="article_2">
+          <h3>Raumbuchungen zum Raum A.E.01:</h3>
+          <table id="tabelle_raumbuchung">
+            <thead>
+              <tr>
+                <th>Datum</th>
+                <th>Startuhrzeit</th>
+                <th>Enduhrzeit</th>
+                <th>Bezeichung</th>
+              </tr>
+            </thead>
+            <tbody id = "buchungen">
+              <!-- leerer tbody für die Buchungen zum Raum -->
+            </tbody>
+          </table>
+        </article>
+      </div>
+    </main>
+    
+    <!--Aside für die Meldungen-->
+    <%- include("includes/aside.ejs") %>
+    <!--Footer für das Copyright-->
+    <%- include("includes/footer.ejs") %>
+    <!-- WICHTIG UM JS AUZSUFUHREN! -->
+    <script src='js/script.js'></script>
+  </body>
+</html>

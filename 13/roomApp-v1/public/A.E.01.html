@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Raumdetails</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/grid.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body id="outside_container1">
+
+    <header id="header_item1">
+      <h1>Raumapp</h1>
+      <a href="dashboard.html">
+        <img src="img/Logo.jpg" alt="Logo" id="logo_image" height="80" width="80" />
+      </a>
+    </header>
+
+    <nav id="nav_item1">
+      <b>Navigation:</b>
+      <ul>
+        <li><a href="raumliste.html">Raumliste</a></li>
+        <li>|</li>
+        <li><a href="WT_PR03_3_Buchungen1.html">Buchungsdetails</a></li>
+        <li>|</li>
+        <li><a href="WT_PR03_A4_Seminar1.html">Buchungsformular</a></li>
+      </ul>
+    </nav>
+
+    <!--Main für die Raum- und Buchungsinformationen-->
+    <main id="inner_container1">
+
+      <figure id="bild_ae01">
+        <img src="img/A.E.01.jpg" alt="A.E.01" id="AE01_Bild" />
+        <figcaption>
+          <small>AE01 Hörsaal</small>
+        </figcaption>
+      </figure>
+
+      <div id="articles1">
+        <article id="article_1">
+          <h2>Informationen zum Raum A.E.01:</h2>
+          <ul id = "rauminfos">
+            <!-- leere Liste für die Informationen zum Raum -->
+          </ul>
+        </article>
+        <article class="article_2">
+          <h3>Raumbuchungen zum Raum A.E.01:</h3>
+          <table id="tabelle_raumbuchung">
+            <thead>
+              <tr>
+                <th>Datum</th>
+                <th>Startuhrzeit</th>
+                <th>Enduhrzeit</th>
+                <th>Bezeichung</th>
+              </tr>
+            </thead>
+            <tbody id = "buchungen">
+              <!-- leerer tbody für die Buchungen zum Raum -->
+            </tbody>
+          </table>
+        </article>
+      </div>
+    </main>
+    
+    <!--Aside für die Meldungen-->
+    <aside id="aside_item1">
+      <h4>Aktuelle Meldungen:</h4>
+
+      <ul>
+        <li>
+          <b>Technische Wartungen</b>
+          <ul>
+            <li>21.09.2019</li>
+            <li>
+              Es finden am 24.09.2019 von 13.00 - 15.00 Uhr technische Wartungen
+              statt.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <b>Rucksack vergessen</b>
+          <ul>
+            <li>23.09.2019</li>
+            <li>
+              Es wurde ein blauer Rucksack gefunden, der im Sekretariat abgeholt
+              werden kann.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+    <!--Footer für das Copyright-->
+    <footer id="footer_item1">
+      Copyright--© 2019 Arman Iliev & Dustin Cziurlok
+    </footer>
+    <!-- WICHTIG UM JS AUZSUFUHREN! -->
+    <script src='js/script.js'></script>
+    <!-- WICHTIG UM JS AUZSUFUHREN! -->
+  </body>
+</html>

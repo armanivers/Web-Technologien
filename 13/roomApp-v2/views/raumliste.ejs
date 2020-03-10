@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    <html lang="de">
+      <head>
+        <meta charset="utf-8" />
+        <title>Raumliste</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/flexbox.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      </head>
+      <body>
+        <script src = "js/script.js"></script>
+        <!--Header für die Navigation und die Raumsuche-->
+        <div id="container_rot">
+          <!--Roter Container-->
+          <header>
+            <%- include("includes/header.ejs") %>
+          </header>
+    
+          <nav>
+            <%- include("includes/navigation.ejs") %>
+          </nav>
+    
+          <!--Main für die Raumliste-->
+          <div id="gruen">
+            <main id="schwarz">
+              <h2>Raum Suchen:</h2>
+              <form
+                action="https://labs.inf.fh-dortmund.de/roomReservationService/testRoomSearch.php"
+                method="GET"
+              >
+                <label for="roomno">Raumnummer suchen</label>
+                <input
+                  type="text"
+                  name="roomno"
+                  id="roomno"
+                  list="raumvorschläge"
+                  pattern="[A-Z][\.][E123][\.][0-9]{2}"
+                  placeholder="Raumnummer"
+                  required
+                /><br />
+                <datalist id="raumvorschläge">
+                  <option value="A.E.01"> </option>
+                  <option value="A.3.03"> </option>
+                  <option value="A.2.23"> </option>
+                </datalist>
+    
+                <button type="submit" id="raumnummer_button">Finden</button>
+              </form>
+              <h3>Raumliste:</h3>
+              <ul>
+                 <!--Raumlistearray durchgehen!-->
+               <% if(raumListe.length > 0) { %>
+                <% for (raum of raumListe) { %>
+                    <li>
+                        <b>Raum <%= raumListe.indexOf(raum)+1%></b>
+                        <ul>
+                            <!--Fruher war, aber wenn die ejs datei mit 01 endet wird sie nicht geoffnet?? -->
+                            <!--   <li>Nummer: <a href="/<%=raum.nummer%>"><%=raum.nummer%></a></li>      -->
+                            
+                            <li>Nummer: <a href="/raumdetail"><%=raum.nummer%></a></li>
+                            <li>Bezeichnung: <%=raum.bezeichnung%></li>
+                            <li>Gebäudebezeichnung: <%=raum.gebaude%></li>
+                        </ul>
+                    </li>
+                <% } %>
+               <% } else { %>
+                Keine Raume verfugbar!
+               <% } %>
+              </ul>
+            </main>
+            <!--Aside für die Meldungen-->
+            <%- include("includes/aside.ejs") %>
+          </div>
+          <!--Footer für das Copyright-->
+          <%- include("includes/footer.ejs") %>
+        </div>
+        <!--Roter Container-->
+      </body>
+    </html>

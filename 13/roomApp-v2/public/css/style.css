@@ -1,0 +1,161 @@
+/*Praktikum 6*/
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    text-shadow:6px 6px 0px rgba(0,0,0,0.2);
+    letter-spacing: 10px;
+    margin-bottom: 50px;
+}
+
+h2,h3,h4 {
+    font-size: 20px;
+    color: rgb(204, 36, 92);
+    /*nicht notwendig*/
+}
+
+/*Praktikum 5 aufgabe 2.2, reihenfolge wichtig! Vor input:...*/
+input:required{
+    font-style: italic;
+    background-color: rgb(197, 179, 13);
+}
+
+/* damit input (submit button) nicht markiert wird einfach not(type:"submit")*/
+/* oder zu input:button andern*/
+
+input:valid{
+    background-color: lightblue;
+}
+/*Fur Textarea eigenes feld*/
+textarea:valid{
+    background-color: lightblue;
+}
+input:invalid{
+    background-color: rgba(255, 0, 0, 0.548);
+}
+/*Fur Textarea eigenes feld*/
+textarea:invalid{
+    background-color: rgba(255, 0, 0, 0.548);
+}
+
+.erforderlich::after{
+    content: "*";
+    color: red;
+}
+
+/*after nicht fur input elemente nutzen! deswegen einen leeren span erstellen mit spezielle class
+input:required::after{
+    content:" erforderliches Feld ";
+}
+*/
+
+aside{
+    background-color: lightgray;
+    /*Praktikum 6 */
+    padding: 3px;
+    margin:3px;
+    border: 2px dashed;
+}
+
+nav a:hover{
+    color:blue;
+}
+
+*{
+    font-family: Helvetica,Arial,sans-serif;
+    /*nicht notwendig*/
+    font-size: 18px;
+    
+}
+html,body{
+    min-height: 100%;
+}
+body{
+    background: linear-gradient(to top, #ff9933 0%, #ffcc66 100%);;
+}
+
+#tabelle_raumbuchung thead{ 
+    background-color: gray;
+}
+
+#tabelle_raumbuchung tbody tr:nth-of-type(even){
+    background-color: rgb(77, 105, 143);
+}
+
+#tabelle_raumbuchung tbody tr:nth-child(odd) {
+    background-color: rgb(116, 156, 211);
+}
+
+/* size von icon 32x32px*/
+[href^="mailto"]::before{
+    content: url(../email_icon.png);
+}
+
+/*rahmen gestalten*/
+main fieldset{
+    /*benotigt man display:box?*/
+    padding: 5px;
+    margin:5px;
+    border-radius: 10px;
+}
+main fieldset legend{
+    /*benotigt man display:box?*/
+    font-size: 0.8em;
+    border: 5px solid lightslategrey;
+    background-color: lightslategrey;
+    border-radius: 10px;
+    font-style: italic;
+    font-weight: bold;
+    box-shadow: 2px 2px black;
+}
+/* Praktkum 6 Aufgabe 5*/
+main article{
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* Praktikum 7 Aufgabe 1*/
+nav ul li{
+    display: inline;
+    margin: 5px;
+}
+/* Praktikum 7 Aufgabe 2.1*/
+
+header h1, header figure{
+    display: inline
+}
+
+/* Praktikum 7 Aufgabe 2.2*/
+#AE01_Bild{
+    float: right;
+}
+
+/* Praktikum 7 Aufgabe 3*/
+footer{
+    position: fixed;
+    bottom:0px;
+    left:78%;
+}
+/* optional style stuff*/
+nav b{
+    color:hsl(0, 100%, 36%);
+    font-size: 30px;
+}
+
+@media only screen and (max-width:768px){
+    h1 {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        text-shadow:6px 6px 0px rgba(0,0,0,0.2);
+        letter-spacing: 10px;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width:480px){
+    h1{
+        font-size: 0px;
+        visibility: hidden;
+    }
+}
