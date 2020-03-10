@@ -1,0 +1,64 @@
+#artikel1 {
+    grid-area: artikel1;
+}
+#artikel2 {
+    grid-area: artikel2;
+}
+#bild{
+    grid-area: bild;
+}
+
+header {
+    grid-area: header;
+}
+
+nav{
+    grid-area: nav;
+}
+
+main{
+    grid-area: haupt;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer{
+    grid-area: footer;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-template-areas: "header header"
+                         "nav nav"
+                         "haupt aside"
+                         "footer aside";
+}  
+
+main {
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-template-areas: "artikel1 bild"
+                         "artikel2 bild";
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-areas: "header"
+                             "nav"
+                             "haupt"
+                             "aside"
+                             "footer";
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        grid-template-areas: "artikel1"
+                             "artikel2"
+                             "bild";
+    }
+}

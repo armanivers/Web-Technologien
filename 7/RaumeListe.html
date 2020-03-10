@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RaumeListe</title>
+    <link rel="stylesheet" href="script/styles.css" />
+    <link rel="stylesheet" href="script/flexbox.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Raumverwaltung</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="RaumeListe.html">RaumeListe</a></li>
+        <li><a> | </a></li>
+        <li><a href="Raumdetails.html">Raumdetails</a></li>
+        <li><a> | </a></li>
+        <li><a href="Buchungsdetails.html">Buchungsdetails</a></li>
+        <li><a> | </a></li>
+        <li><a href="BuchungAnlegen.html"> Buchung Anlegen</a></li>
+      </ul>
+    </nav>
+    <div id="containerGreen">
+      <main>
+        <h2>Raumsuchen</h2>
+        <form
+          method="GET"
+          action="https://labs.inf.fh-dortmund.de/roomReservationService/testRoomSearch.php"
+        >
+          <p>
+            <label for="RaumNr">Raum Suchen: </label>
+            <input
+              type="text"
+              id="RaumNr"
+              name="roomno"
+              value="A.E.01"
+              list="suggestions"
+              pattern="[A-Z][\.][E1-3][\.][0-9][0-9]"
+              maxlength="6"
+              required
+            />
+
+            <datalist id="suggestions">
+              <option value="A.E.01"> </option>
+              <option value="A.E.02"> </option>
+              <option value="A.E.03"> </option>
+              <option value="A.E.04"> </option>
+              <option value="A.B.07"> </option>
+              <option value="B.E.02"> </option>
+            </datalist>
+
+            <button type="submit">Finden</button>
+          </p>
+        </form>
+
+        <h3>Verfugbare Raume</h3>
+        <ul>
+          <li>
+            Raum 1:
+            <ul>
+              <li><a href="Raumdetails.html">A.E.01</a></li>
+              <li>Hoersaal</li>
+              <li>EF42</li>
+            </ul>
+          </li>
+          <li>
+            Raum 2:
+            <ul>
+              <li><a href="Raumdetails.html">A.E.02</a> Hoersaal EF42</li>
+              <li>Seminarraum</li>
+              <li>EF42</li>
+            </ul>
+          </li>
+          <li>
+            Raum 3:
+            <ul>
+              <li><a href="Raumdetails.html">A.E.03</a> Hoersaal EF42</li>
+              <li>Computerraum</li>
+              <li>EF42</li>
+            </ul>
+          </li>
+        </ul>
+      </main>
+
+      <aside>
+        <h4>Meldungen</h4>
+        <ul>
+          <li>
+            Kaputter Beamer
+            <ul>
+              <li>10.10.19</li>
+              <li>Beamer wurde kaputt gemacht</li>
+            </ul>
+          </li>
+          <li>
+            Tafel kaputt
+            <ul>
+              <li>12.4.20</li>
+              <li>Tafel hat eine andere Farbe</li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+    </div>
+    <footer>
+      <p>Copyright@ArmanIliev</p>
+    </footer>
+  </body>
+</html>

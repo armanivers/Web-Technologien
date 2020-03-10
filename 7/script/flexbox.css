@@ -1,0 +1,11 @@
+#containerGreen{
+    display: flex;
+    flex-direction: row;
+    flex: 7 2;
+}
+main{
+    flex: 6;
+}
+aside{
+    flex: 4;
+}

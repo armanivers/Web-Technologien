@@ -1,0 +1,79 @@
+* {
+    font-family:Helvetica,Arial,Verdana;
+}
+
+h1 {
+    color:rgb(70, 104, 196);
+    text-shadow:6px 6px 0px rgba(0,0,0,0.2);
+    letter-spacing: 3px;
+}
+h2, h3, h4 {
+    color: blue;
+}
+
+input:invalid{
+    background-color:rgba(255, 0, 0, 0.548);;
+}
+input:valid{
+    background-color:lightblue;
+}
+textarea:valid{
+    background-color: lightblue;
+}
+textarea:invalid{
+    background-color: rgba(255, 0, 0, 0.548);
+}
+
+/*
+after nicht fur input elemente nutzen! deswegen einen leeren span erstellen mit 
+spezielles class     <span class= "erforderlich"></span>      nach dem input setzen
+*/
+
+.erforderlich::after{
+    content:"*";
+    color:red;
+}
+
+aside {
+    background-color: lightgray;
+    padding: 3px;
+    margin: 3px;
+    border: 2px dotted;
+}
+
+nav a:hover{
+    color:blue;
+}
+
+#TabelleRaumbuchung thead tr{
+    background-color:lightgray;
+}
+#TabelleRaumbuchung tbody tr:nth-of-type(even){
+    background-color:lightslategray;
+}
+
+a[href^="mailto"]::before{
+    content: url(/src/email_icon.png);
+}
+
+fieldset {
+    padding: 5px;
+    margin: 5px;
+
+}
+
+fieldset legend {
+    font-style:italic;
+    font-size: 0.8em;
+    border: 5px solid lightslategray;
+    background-color: lightslategray;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+main article{
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+}

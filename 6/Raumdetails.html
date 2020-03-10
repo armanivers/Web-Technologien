@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Raumdetails (Detailseite zu einem Raum)</title>
+    <link rel="stylesheet" href="script/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Raumverwaltung</h1>
+      <img src="/src/logo.jpg" alt="Logo" height="120" width="120" />
+    </header>
+    <nav>
+      <a href="RaumeListe.html">RaumeListe</a>
+      <a> | </a>
+      <a href="Raumdetails.html">Raumdetails</a>
+      <a> | </a>
+      <a href="Buchungsdetails.html">Buchungsdetails</a>
+      <a> | </a>
+      <a href="BuchungAnlegen.html"> Buchung Anlegen</a>
+    </nav>
+    <main>
+      <article>
+        <h2>Informationen Zum Raum</h2>
+        <ol>
+          <li>Nummer: A.E.01</li>
+          <li>Bezeichnung: Hoersaal</li>
+          <li>Gebaude: EF42</li>
+          <li>Kapazitat: 40</li>
+          <li>Ausstattungsmerkamel: 3 Beamer, 2 Whiteboards</li>
+        </ol>
+
+        <figure>
+          <img
+            src="/src/ae01.jpg"
+            alt="Bild von A.E.01"
+            height="250"
+            width="400"
+          />
+          <figcaption>
+            Bild Von A.E.01
+          </figcaption>
+        </figure>
+      </article>
+      <article>
+        <h3>Buchungen</h3>
+
+        <table id="TabelleRaumbuchung">
+          <thead>
+            <tr>
+              <th>Datum</th>
+              <th>Startuhrzeit</th>
+              <th>Enduhrzeit</th>
+              <th>Bezeichnung</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10.10</td>
+              <td>10:00</td>
+              <td>12:00</td>
+              <td><a href="Buchungsdetails.html">Kolloqium</a></td>
+            </tr>
+            <tr>
+              <td>11.10</td>
+              <td>11:00</td>
+              <td>12:00</td>
+              <td><a href="Buchungsdetails.html">Seminar</a></td>
+            </tr>
+            <tr>
+              <td>10.10</td>
+              <td>12:00</td>
+              <td>14:00</td>
+              <td><a href="Buchungsdetails.html">Vorlesung</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </main>
+    <aside>
+      <h4>Meldungen</h4>
+      <ul>
+        <li>
+          Kaputter Beamer
+          <ul>
+            <li>10.10.19</li>
+            <li>Beamer wurde kaputt gemacht</li>
+          </ul>
+        </li>
+        <li>
+          Tafel kaputt
+          <ul>
+            <li>12.4.20</li>
+            <li>Tafel hat eine andere Farbe</li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+    <footer>
+      <p>Copyright@ArmanIliev</p>
+    </footer>
+  </body>
+</html>

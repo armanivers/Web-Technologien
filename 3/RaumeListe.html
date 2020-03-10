@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>RaumeListe</title>
+    </head>
+    <body>
+        <header>
+            <h1>Raumverwaltung</h1>
+            <img src="/src/logo.jpg" alt="Logo" height="120" width="120">
+        </header>
+        <nav>
+            <a href="RaumeListe.html">RaumeListe</a>
+            <a> | </a>
+            <a href="Raumdetails.html">Raumdetails</a>
+            <a> | </a>
+            <a href="Buchungsdetails.html">Buchungsdetails</a>
+            <a> | </a>
+            <a href="BuchungAnlegen.html"> Buchung Anlegen</a>
+        </nav>
+
+        <main>
+            <h2>Verfugbare Raume</h2>
+            <ul>
+                <li><a href="Raumdetails.html">A.E.01</a> Hoersaal EF42</li>
+            </ul>
+            <ul>
+                <li><a href="Raumdetails.html">A.E.02</a> Hoersaal EF42</li>
+            </ul>
+            <ul>
+                <li><a href="Raumdetails.html">A.E.03</a> Hoersaal EF42</li>
+            </ul>
+            
+            <form method="POST">
+                <p>
+                    <label for="RaumNr">Raum Suchen: </label>
+                    <input type="text" id="RaumNr" name="RaumNrField" value="A.E.01">
+                    <button type="submit">Finden</button>
+                </p>
+            </form>
+        </main>
+
+        <hr>
+
+        <aside>
+            <h4>Meldungen</h4>
+            <ul>
+                <li>Kaputter Beamer
+                    <ul>
+                        <li>10.10.19</li>
+                        <li>Beamer wurde kaputt gemacht</li>
+                    </ul>
+                </li>
+                <li>Tafel kaputt
+                    <ul>
+                        <li>12.4.20</li>
+                        <li>Tafel hat eine andere Farbe</li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+        <footer>
+            <p>Copyright@ArmanIliev</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Buchung Anlegen</title>
+        <link rel="stylesheet" href="script/styles.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Raumverwaltung</h1>
+            <img src="/src/logo.jpg" alt="Logo" height="120" width="120">
+        </header>
+
+        <nav>
+            <a href="RaumeListe.html">RaumeListe</a>
+            <a> | </a>
+            <a href="Raumdetails.html">Raumdetails</a>
+            <a> | </a>
+            <a href="Buchungsdetails.html">Buchungsdetails</a>
+            <a> | </a>
+            <a href="BuchungAnlegen.html"> Buchung Anlegen</a>
+        </nav>
+
+        <main>
+            <form method="POST" action="https://labs.inf.fh-dortmund.de/roomReservationService/testCreateReservation.php">
+                <fieldset>
+                    <legend>Buchung anlegen</legend>
+                    <p>
+                        <label for="RaumNr">Nummer: </label>
+                        <select id="RaumNr" name="roomno" autofocus>  <!-- In den Klammern muss auch noch requiered hin! -->
+                            <option value="A.E.01">A.E.01</option>
+                            <option value="A.E.02">A.E.02</option>
+                            <option value="A.E.03">A.E.03</option>
+                            <option value="A.E.04">A.E.04</option>
+                        </select>
+                        <span class= "erforderlich"></span>
+                    </p>
+                    <p>
+                        <label for="RaumBezeichnung">Raumbezeichung: </label>
+                        <input type="text" id="RaumBezeichnung" name="restitle" value="z.B. Seminar/Vorlesung" required maxlength="20">
+                        <span class= "erforderlich"></span>
+                    </p>
+                    
+                    <p>
+                        <label for="Datum">Datum: </label>
+                        <input type="date" id="Datum" name="resdate" required> 
+                        <span class= "erforderlich"></span>
+                    </p>
+                    <p>
+                        <label for="Startuhrzeit">Startuhrzeit: </label>
+                        <input type="time" id="Startuhrzeit" name="resstart" min="08:00" max="21:00" required>
+                        <span class= "erforderlich"></span>
+                    </p>
+                    <p>
+                        <label for="Enduhrzeit">Startuhrzeit: </label>
+                        <input type="time" id="Enduhrzeit" name="resend" max="22:00" required>
+                        <span class= "erforderlich"></span>
+                    </p>
+                    <p>
+                        <label for="BuchendePerson">Buchende Person</label>
+                        <select id="BuchendePerson" name="resperson">
+                            <option value="Preis">Preis</option>
+                            <option value="Bab">Bab</option>
+                            <option value="Sven">Sven</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="AnzahlTeilnehmer">Anzahl Teilnehmer:</label>
+                        <input type="number" id="AnzahlTeilnehmer" name="resparticipants">
+                    </p>
+                    <p>
+                        <label for="Beschreibung">Beschreibung: </label>
+                        <textarea rows="5" cols="50" id="Beschreibung" name="resdescription" maxlength="500"></textarea>
+                    </p>
+
+                    <p>
+                        <button type="submit">Buchen</button>
+                    </p>
+                </fieldset>
+            </form>
+        </main>
+
+        <aside>
+            <h4>Meldungen</h4>
+            <ul>
+                <li>Kaputter Beamer
+                    <ul>
+                        <li>10.10.19</li>
+                        <li>Beamer wurde kaputt gemacht</li>
+                    </ul>
+                </li>
+                <li>Tafel kaputt
+                    <ul>
+                        <li>12.4.20</li>
+                        <li>Tafel hat eine andere Farbe</li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+        <footer>
+            <p>Copyright@ArmanIliev</p>
+        </footer>
+    </body>
+</html>
